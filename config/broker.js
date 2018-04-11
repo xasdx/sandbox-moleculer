@@ -2,10 +2,9 @@ let { ServiceBroker } = require("moleculer")
 
 let broker = new ServiceBroker({
   statistics: true,
-  middlewares: [require("./log.middleware")]
+  middlewares: [require("../shared/log.middleware")]
 })
 
-broker.loadService("./post.service")
-broker.loadService("./user.service")
+broker.loadServices("../")
 
 module.exports = broker

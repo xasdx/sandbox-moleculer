@@ -1,4 +1,4 @@
-let broker = require("./broker")
+let broker = require("./config/broker")
 
 let post = {
   body: {
