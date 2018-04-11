@@ -27,7 +27,7 @@ let logBrokerStats = async () => {
 
 broker.start().then(async () => {
   
-  if (false) { logBrokerStats() }
+  if (process.env.METRICS_LOG_BROKER_STATS) { logBrokerStats() }
   
   await broker.call("post.create", post)
   await broker.call("post.create", otherPost)

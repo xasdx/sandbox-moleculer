@@ -1,9 +1,10 @@
 {
   "name": "sandbox-moleculer",
   "scripts": {
-    "test": "node index.js"
+    "test": "node -r dotenv/config index.js"
   },
   "dependencies": {
+    "dotenv": "^5.0.1",
     "moleculer": "^0.12.1"
   }
 }
