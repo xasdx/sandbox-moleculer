@@ -5,7 +5,7 @@ let broker = new ServiceBroker({
   middlewares: [require("./log.middleware")]
 })
 
-require("./post.service")(broker)
-require("./user.service")(broker)
+broker.loadService("./post.service")
+broker.loadService("./user.service")
 
 module.exports = broker
